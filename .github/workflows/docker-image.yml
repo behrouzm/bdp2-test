@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag behimolla/web_server
     - name: push the image to DockerHub
-      run: docker login -u behimolla -p ${{ secret.DOCKER_TOCKEN }} && docker push behimolla/web_server
+      run: docker login -u behimolla -p ${{ secrets.DOCKER_TOCKEN }} && docker push behimolla/web_server
